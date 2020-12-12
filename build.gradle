@@ -1,9 +1,12 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'application'
 }
 
 group 'com.chadmarchand.forgeofnations'
 version '0.0.1'
+
+mainClassName = 'com.chadmarchand.forgeofnations.application.Application'
 
 repositories {
     mavenCentral()
