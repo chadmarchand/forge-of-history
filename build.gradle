@@ -1,3 +1,9 @@
+buildscript {
+    ext {
+        koinVersion = '2.2.0'
+    }
+}
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
     id 'application'
@@ -10,8 +16,13 @@ mainClassName = 'com.chadmarchand.forgeofnations.application.Application'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation "org.koin:koin-core:$koinVersion"
+    implementation "org.koin:koin-core-ext:$koinVersion"
+    testImplementation "org.koin:koin-test:$koinVersion"
 }
