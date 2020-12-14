@@ -1,7 +1,11 @@
 package com.chadmarchand.forgeofnations.engine
 
+import mu.KotlinLogging
+
+private val log = KotlinLogging.logger {}
+
 class EngineService {
     fun doSomething() {
-        println("Doing something")
+        log.trace("Doing something")
     }
 }
