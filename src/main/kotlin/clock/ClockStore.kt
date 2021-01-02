@@ -1,4 +1,4 @@
-package com.chadmarchand.forgeofnations.clock
+package com.chadmarchand.forgeofhistory.clock
 
 class ClockStore {
     private var gameTime = 1

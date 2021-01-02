@@ -1,8 +1,8 @@
-package com.chadmarchand.forgeofnations.koin
+package com.chadmarchand.forgeofhistory.koin
 
-import com.chadmarchand.forgeofnations.clock.clockModule
-import com.chadmarchand.forgeofnations.engine.engineModule
-import com.chadmarchand.forgeofnations.research.researchModule
+import com.chadmarchand.forgeofhistory.clock.clockModule
+import com.chadmarchand.forgeofhistory.engine.engineModule
+import com.chadmarchand.forgeofhistory.research.researchModule
 import com.chadmarchand.kutna.event.EventBus
 import org.koin.dsl.module
 import org.koin.experimental.builder.single

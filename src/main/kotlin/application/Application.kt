@@ -1,7 +1,7 @@
-package com.chadmarchand.forgeofnations.application
+package com.chadmarchand.forgeofhistory.application
 
-import com.chadmarchand.forgeofnations.engine.Engine
-import com.chadmarchand.forgeofnations.koin.initializeKoin
+import com.chadmarchand.forgeofhistory.engine.Engine
+import com.chadmarchand.forgeofhistory.koin.initializeKoin
 
 object Application {
     @JvmStatic

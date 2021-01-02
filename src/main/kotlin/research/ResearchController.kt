@@ -1,6 +1,6 @@
-package com.chadmarchand.forgeofnations.research
+package com.chadmarchand.forgeofhistory.research
 
-import com.chadmarchand.forgeofnations.clock.GameDayElapsedEvent
+import com.chadmarchand.forgeofhistory.clock.GameDayElapsedEvent
 import com.chadmarchand.kutna.event.EventBus
 import com.chadmarchand.kutna.event.OnEvent
 import mu.KotlinLogging
