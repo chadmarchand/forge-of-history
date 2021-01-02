@@ -10,10 +10,10 @@ plugins {
     id 'application'
 }
 
-group 'com.chadmarchand.forgeofnations'
+group 'com.chadmarchand.forgeofhistory'
 version '0.0.1'
 
-mainClassName = 'com.chadmarchand.forgeofnations.application.Application'
+mainClassName = 'com.chadmarchand.forgeofhistory.application.Application'
 
 repositories {
     mavenCentral()

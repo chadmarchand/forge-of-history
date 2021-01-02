@@ -1,4 +1,4 @@
-package com.chadmarchand.forgeofnations.engine
+package com.chadmarchand.forgeofhistory.engine
 
 import org.koin.dsl.module
 import org.koin.experimental.builder.single

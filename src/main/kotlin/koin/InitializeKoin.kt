@@ -1,4 +1,4 @@
-package com.chadmarchand.forgeofnations.koin
+package com.chadmarchand.forgeofhistory.koin
 
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin

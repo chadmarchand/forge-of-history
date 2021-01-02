@@ -1,4 +1,4 @@
-package com.chadmarchand.forgeofnations.clock
+package com.chadmarchand.forgeofhistory.clock
 
 import mu.KotlinLogging
 import org.koin.core.component.KoinComponent

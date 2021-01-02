@@ -1,6 +1,6 @@
-package com.chadmarchand.forgeofnations.engine
+package com.chadmarchand.forgeofhistory.engine
 
-import com.chadmarchand.forgeofnations.clock.ClockController
+import com.chadmarchand.forgeofhistory.clock.ClockController
 import mu.KotlinLogging
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
