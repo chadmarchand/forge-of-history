@@ -1,7 +1,19 @@
 buildscript {
+    repositories {
+        maven {
+            url 'https://dl.bintray.com/cmarchand/kutna-gradle-plugin'
+        }
+    }
+
     ext {
         koinVersion = '2.2.0'
         slf4jVersion = '1.7.30'
+    }
+
+    dependencies {
+        classpath 'com.h2database:h2:1.4.197'
+        classpath 'com.chadmarchand.kutna:kutna-gradle-plugin:1.0.105'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
     }
 }
 
@@ -9,6 +21,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
     id 'application'
 }
+apply plugin: com.chadmarchand.kutna.gradle.KutnaPlugin
 
 group 'com.chadmarchand.forgeofhistory'
 version '0.0.1'
@@ -22,18 +35,32 @@ repositories {
         url 'https://dl.bintray.com/cmarchand/kutna-event'
         metadataSources { artifact() }
     }
+    maven {
+        url 'https://dl.bintray.com/cmarchand/kutna-common'
+        metadataSources { artifact() }
+    }
+    maven {
+        url 'https://dl.bintray.com/cmarchand/kutna-persistence'
+        metadataSources { artifact() }
+    }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-    implementation "org.koin:koin-core:$koinVersion"
-    implementation "org.koin:koin-core-ext:$koinVersion"
-    testImplementation "org.koin:koin-test:$koinVersion"
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.10.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.2.4.RELEASE'
 
     implementation "io.github.microutils:kotlin-logging:2.0.3"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
     implementation "org.slf4j:slf4j-simple:$slf4jVersion"
 
+    testImplementation group: 'com.h2database', name: 'h2', version: '1.4.197'
+    testImplementation group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
+
     implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.90:test"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.90"
+    implementation "com.chadmarchand.kutna:kutna-common:1.0.103"
+    testImplementation "com.chadmarchand.kutna:kutna-common:1.0.103:test"
 }
