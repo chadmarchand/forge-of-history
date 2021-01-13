@@ -1,2 +1,8 @@
 rootProject.name = 'forge-of-history'
 
+// Includes all libraries under ./libs
+new File("$rootDir/libs").listFiles().each {
+    def projectName = it.name
+    include projectName
+    project(":${projectName}").projectDir = file("libs/${projectName}")
+}
