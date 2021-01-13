@@ -1,0 +1,16 @@
+group 'com.chadmarchand.forgeofhistory.research'
+
+dependencies {
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.10.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.2.4.RELEASE'
+
+    testImplementation group: 'com.h2database', name: 'h2', version: '1.4.197'
+    testImplementation group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
+
+    implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
+    testImplementation "com.chadmarchand.kutna:kutna-common:1.0.103:test"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.90:test"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.90"
+
+    implementation project(":clock")
+}

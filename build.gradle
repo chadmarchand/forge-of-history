@@ -21,29 +21,34 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
     id 'application'
 }
-apply plugin: com.chadmarchand.kutna.gradle.KutnaPlugin
+
+allprojects {
+    buildDir = 'build/${rootProject.name}/${project.name}'
+
+    apply plugin: com.chadmarchand.kutna.gradle.KutnaPlugin
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'https://dl.bintray.com/cmarchand/kutna-event'
+            metadataSources { artifact() }
+        }
+        maven {
+            url 'https://dl.bintray.com/cmarchand/kutna-common'
+            metadataSources { artifact() }
+        }
+        maven {
+            url 'https://dl.bintray.com/cmarchand/kutna-persistence'
+            metadataSources { artifact() }
+        }
+    }
+}
 
 group 'com.chadmarchand.forgeofhistory'
 version '0.0.1'
 
 mainClassName = 'com.chadmarchand.forgeofhistory.application.Application'
-
-repositories {
-    mavenCentral()
-    jcenter()
-    maven {
-        url 'https://dl.bintray.com/cmarchand/kutna-event'
-        metadataSources { artifact() }
-    }
-    maven {
-        url 'https://dl.bintray.com/cmarchand/kutna-common'
-        metadataSources { artifact() }
-    }
-    maven {
-        url 'https://dl.bintray.com/cmarchand/kutna-persistence'
-        metadataSources { artifact() }
-    }
-}
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
@@ -63,4 +68,7 @@ dependencies {
     testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.90"
     implementation "com.chadmarchand.kutna:kutna-common:1.0.103"
     testImplementation "com.chadmarchand.kutna:kutna-common:1.0.103:test"
+
+    implementation project(':clock')
+    implementation project(':research')
 }

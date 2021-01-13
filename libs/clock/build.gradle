@@ -1,0 +1,5 @@
+group 'com.chadmarchand.forgeofhistory.clock'
+
+dependencies {
+    implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
+}
