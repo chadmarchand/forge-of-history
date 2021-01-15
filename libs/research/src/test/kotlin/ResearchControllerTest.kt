@@ -14,4 +14,11 @@ class ResearchControllerTest : KoinTest {
     fun canBeCreatedFromKoin() {
         assertThat(researchController).isNotNull
     }
+
+    @Test
+    fun canAddAndGetTechnologies() {
+        assertThat(researchController.getTechnologies()).isEmpty()
+        researchController.addTechnology(Technology(null, "Tech 1"))
+        assertThat(researchController.getTechnologies().isNotEmpty())
+    }
 }
