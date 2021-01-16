@@ -80,6 +80,7 @@ dependencies {
     implementation "com.chadmarchand.kutna:kutna-common:1.0.103"
     testImplementation "com.chadmarchand.kutna:kutna-common:1.0.103:test"
 
+    implementation project(':world')
     implementation project(':clock')
     implementation project(':research')
 }
