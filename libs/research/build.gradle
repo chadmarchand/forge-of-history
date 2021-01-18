@@ -10,11 +10,11 @@ dependencies {
     testImplementation group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
 
     implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
-    implementation "com.chadmarchand.kutna:kutna-common:1.0.103"
-    testImplementation "com.chadmarchand.kutna:kutna-common:1.0.103:test"
-    implementation "com.chadmarchand.kutna:kutna-persistence:1.0.91"
-    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.91:test"
-    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.91"
+    implementation "com.chadmarchand.kutna:kutna-common:1.0.105"
+    testImplementation "com.chadmarchand.kutna:kutna-common:1.0.105:test"
+    implementation "com.chadmarchand.kutna:kutna-persistence:1.0.93"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.93:test"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.93"
 
     implementation project(":clock")
 }
