@@ -74,14 +74,17 @@ dependencies {
     testImplementation group: 'com.h2database', name: 'h2', version: '1.4.197'
 
     implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
-    implementation "com.chadmarchand.kutna:kutna-persistence:1.0.93"
-    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.93:test"
-    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.93"
+    implementation "com.chadmarchand.kutna:kutna-persistence:1.0.99"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.99:test"
+    testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.99"
     implementation "com.chadmarchand.kutna:kutna-common:1.0.105"
     testImplementation "com.chadmarchand.kutna:kutna-common:1.0.105:test"
 
+    implementation project(':testextension')
+    testImplementation project(':testextension')
     implementation project(':world')
     implementation project(':clock')
+    implementation project(':research')
     implementation project(':research')
 }
 
