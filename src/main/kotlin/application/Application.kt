@@ -11,7 +11,7 @@ object Application {
         initializeKoin(
             listOf(persistenceModule)
         )
-        flywayMigrate()
+        flywayMigrate(listOf("db/migration"))
 
         val engine = Engine()
         engine.initialize()

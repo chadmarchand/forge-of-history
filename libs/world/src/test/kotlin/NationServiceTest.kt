@@ -1,5 +1,7 @@
 package com.chadmarchand.forgeofhistory.world
 
+import com.chadmarchand.kutna.common.types.DEFAULT_ID
+import com.chadmarchand.kutna.common.types.Id
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -18,7 +20,7 @@ class NationServiceTest : KoinTest {
     @Test
     fun canAddAndGetNation() {
         assertThat(nationService.getAll()).isEmpty()
-        nationService.add(Nation(null, "Canada"))
-        assertThat(nationService.getAll().isNotEmpty())
+        nationService.add(Nation(Id.DEFAULT_ID, "Canada"))
+        assertThat(nationService.getAll()).isNotEmpty()
     }
 }

@@ -7,5 +7,6 @@ class WorldTestExtension : KutnaTestSetupExtensionPersistent(
     listOf(
         persistenceModule,
         worldModule
-    )
+    ),
+    listOf("db/migration")
 )
