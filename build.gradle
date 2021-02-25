@@ -46,6 +46,12 @@ allprojects {
         }
     }
 
+    dependencies {
+        implementation "net.onedaybeard.artemis:artemis-odb:2.3.0"
+        implementation "net.mostlyoriginal.artemis-odb:contrib-core:2.4.0"
+        implementation "net.mostlyoriginal.artemis-odb:contrib-eventbus:2.4.0"
+    }
+
     compileKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
@@ -80,9 +86,10 @@ dependencies {
     implementation "com.chadmarchand.kutna:kutna-common:1.0.105"
     testImplementation "com.chadmarchand.kutna:kutna-common:1.0.105:test"
 
+    implementation project(':world')
+    implementation project(':component')
     implementation project(':testextension')
     testImplementation project(':testextension')
-    implementation project(':world')
     implementation project(':clock')
     implementation project(':research')
     implementation project(':research')
