@@ -92,7 +92,7 @@ dependencies {
     testImplementation project(':testextension')
     implementation project(':clock')
     implementation project(':research')
-    implementation project(':research')
+    implementation project(':ai')
 }
 
 run {

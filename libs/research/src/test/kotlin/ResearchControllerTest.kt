@@ -11,7 +11,6 @@ import org.koin.test.KoinTest
 @ExtendWith(ResearchTestExtension::class)
 class ResearchControllerTest : KoinTest {
     private val researchController: ResearchController by inject()
-    private val nationService: NationService by inject()
 
     @Test
     fun canBeCreatedFromKoin() {
@@ -29,10 +28,10 @@ class ResearchControllerTest : KoinTest {
     fun canQueueResearchProject() {
         assertThat(researchController.getResearchProjects()).isEmpty()
 
-        val nation = nationService.add(Nation(name = "Canada"))
+        val entityId = 2
         val tech = researchController.addTechnology(Technology(name = "Tech 1"))
 
-        researchController.queueResearchProject(tech.id, nation.id)
+        researchController.queueResearchProject(tech.id, entityId)
 
         assertThat(researchController.getResearchProjects()).isNotEmpty()
     }

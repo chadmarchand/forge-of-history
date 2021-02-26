@@ -28,8 +28,8 @@ class ResearchController : KoinComponent {
         return technologyService.add(technology)
     }
 
-    fun queueResearchProject(technologyId: Id, nationId: Id): ResearchProject {
-        return researchProjectService.add(ResearchProject(technologyId = technologyId, nationId = nationId))
+    fun queueResearchProject(technologyId: Id, entityId: Int): ResearchProject {
+        return researchProjectService.add(ResearchProject(technologyId = technologyId, entityId = entityId))
     }
 
     fun getResearchProjects() = researchProjectService.getAll()
