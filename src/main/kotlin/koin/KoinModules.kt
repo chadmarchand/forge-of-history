@@ -1,5 +1,6 @@
 package com.chadmarchand.forgeofhistory.koin
 
+import com.chadmarchand.forgeofhistory.ai.aiModule
 import com.chadmarchand.forgeofhistory.clock.clockModule
 import com.chadmarchand.forgeofhistory.component.componentModule
 import com.chadmarchand.forgeofhistory.engine.engineModule
@@ -17,5 +18,6 @@ internal val koinModules = listOf(
     worldModule,
     clockModule,
     eventModule,
-    researchModule
+    researchModule,
+    aiModule
 )

@@ -11,7 +11,7 @@ data class ResearchProject(
     var id: Id = Id.DEFAULT_ID,
 
     @Persist
-    var nationId: Id = -1,
+    var entityId: Int = -1,
 
     @Persist
     var technologyId: Id? = null,
@@ -23,9 +23,9 @@ data class ResearchProject(
     var isComplete: Boolean = false
 ) {
     companion object {
-        fun of(nationId: Id, technologyId: Id): ResearchProject {
+        fun of(entityId: Int, technologyId: Id): ResearchProject {
             return ResearchProject(
-                nationId = nationId,
+                entityId = entityId,
                 technologyId = technologyId
             )
         }

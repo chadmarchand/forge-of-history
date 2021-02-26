@@ -20,18 +20,18 @@ class EconomySystem : IteratingSystem(), KoinComponent {
         eventBus.registerSubscriber(this)
     }
 
-    private var stockpileComponentMap: ComponentMapper<StockpileComponent>? = null
+    private lateinit var stockpileComponentMap: ComponentMapper<StockpileComponent>
 
     override fun process(id: Int) {
-        logger.debug("Processing stockpile component with money: ${stockpileComponentMap!![id].money}")
+        logger.debug("Processing stockpile component with money: ${stockpileComponentMap[id].money}")
     }
 
     @OnEvent(GameDayElapsedEvent::class)
     fun handleGameDayElapsedEvent(event: GameDayElapsedEvent) {
         logger.debug("Handling GameDayElapsedEvent for ${this.entityIds.size()} entities")
         for (i in 0 until this.entityIds.size()) {
-            stockpileComponentMap!![this.entityIds.get(i)].money += 500.0
-            logger.debug("Stockpile money amount: ${stockpileComponentMap!![this.entityIds.get(i)].money}")
+            stockpileComponentMap[this.entityIds.get(i)].money += 500.0
+            logger.debug("Stockpile money amount: ${stockpileComponentMap[this.entityIds.get(i)].money}")
         }
     }
 }

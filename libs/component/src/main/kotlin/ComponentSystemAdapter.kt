@@ -1,6 +1,7 @@
 package com.chadmarchand.forgeofhistory.component
 
 import com.artemis.World
+import com.chadmarchand.forgeofhistory.ai.AiControllerComponent
 import com.chadmarchand.forgeofhistory.world.StockpileComponent
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -12,9 +13,11 @@ class ComponentSystemAdapter : KoinComponent {
         // Temporarily add entities for testing purposes
         val entityId = world.create()
         world.edit(entityId).create(StockpileComponent::class.java).money = 2000.0
+        world.edit(entityId).create(AiControllerComponent::class.java)
 
         val entityId2 = world.create()
         world.edit(entityId2).create(StockpileComponent::class.java).money = 3000.0
+        world.edit(entityId2).create(AiControllerComponent::class.java)
     }
 
     fun loop() {

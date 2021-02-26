@@ -2,4 +2,5 @@ group 'com.chadmarchand.forgeofhistory.component'
 
 dependencies {
     implementation project(":world")
+    implementation project(":ai")
 }
