@@ -17,4 +17,6 @@ val researchModule = module(createdAtStart = true) {
     single(getRepositoryQualifier<ResearchProject>()) {
         Repository(ResearchProject::class)
     }
+
+    single { QueueResearchActionExecutor() }
 }

@@ -4,6 +4,4 @@ dependencies {
     implementation "com.chadmarchand.kutna:kutna-common:1.0.105"
     implementation "com.chadmarchand.kutna:kutna-persistence:1.0.99"
     implementation "com.chadmarchand.kutna:kutna-event:1.0.0"
-
-    implementation project(":research")
 }
