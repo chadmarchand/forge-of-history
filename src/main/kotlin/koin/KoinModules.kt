@@ -5,6 +5,7 @@ import com.chadmarchand.forgeofhistory.clock.clockModule
 import com.chadmarchand.forgeofhistory.component.componentModule
 import com.chadmarchand.forgeofhistory.engine.engineModule
 import com.chadmarchand.forgeofhistory.research.researchModule
+import com.chadmarchand.forgeofhistory.save.saveModule
 import com.chadmarchand.forgeofhistory.world.worldModule
 import com.chadmarchand.kutna.event.EventBus
 import org.koin.dsl.module
@@ -19,5 +20,6 @@ internal val koinModules = listOf(
     clockModule,
     eventModule,
     researchModule,
-    aiModule
+    aiModule,
+    saveModule
 )
