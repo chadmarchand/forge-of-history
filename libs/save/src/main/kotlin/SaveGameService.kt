@@ -22,7 +22,6 @@ class SaveGameService : KoinComponent {
         logger.debug("Saving game with tables $tablesString")
         jdbcTemplate.execute("SCRIPT TO 'savegames/quicksave.sql' TABLE ${tablesString};") {
             it.execute()
-            logger.debug("GOT RESULT FROM SQL ${it}")
         }
     }
 
@@ -54,7 +53,7 @@ class SaveGameService : KoinComponent {
             }
 
         if (tablesString == "") {
-            throw RuntimeException("Expected at least one class with dynamic annotation to be found, but none were")
+            throw RuntimeException("Expected at least one class with dynamic annotation, but none were found")
         }
 
         return tablesString
