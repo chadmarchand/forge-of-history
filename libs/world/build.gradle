@@ -17,4 +17,5 @@ dependencies {
     testImplementation "com.chadmarchand.kutna:kutna-persistence:1.0.99"
 
     implementation project(":clock")
+    implementation project(":save")
 }

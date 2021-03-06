@@ -19,4 +19,5 @@ dependencies {
     implementation project(":clock")
     implementation project(":world")
     implementation project(":ai")
+    implementation project(":save")
 }

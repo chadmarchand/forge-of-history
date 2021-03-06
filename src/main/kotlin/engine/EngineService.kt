@@ -1,6 +1,7 @@
 package com.chadmarchand.forgeofhistory.engine
 
 import com.chadmarchand.forgeofhistory.clock.ClockController
+import com.chadmarchand.forgeofhistory.save.SaveGameService
 import com.chadmarchand.forgeofhistory.world.Nation
 import com.chadmarchand.forgeofhistory.world.NationService
 import com.chadmarchand.kutna.common.types.DEFAULT_ID
@@ -14,6 +15,8 @@ private val log = KotlinLogging.logger {}
 class EngineService : KoinComponent {
     private val clockController: ClockController by inject()
     private val nationService: NationService by inject()
+    private val saveGameService: SaveGameService by inject()
+    private var loopCount = 0
 
     fun executeGameLoop() {
         log.debug("Executing game loop")
@@ -25,5 +28,15 @@ class EngineService : KoinComponent {
             nationService.add(Nation(Id.DEFAULT_ID, "Canada"))
         }
         log.debug("Number of nations: ${nationService.getAll()}")
+
+        if (loopCount == 1) {
+            saveGameService.saveGame()
+        }
+
+        if (loopCount == 8) {
+            saveGameService.loadGame()
+        }
+
+        loopCount += 1
     }
 }

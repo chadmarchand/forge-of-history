@@ -3,4 +3,7 @@ group 'com.chadmarchand.forgeofhistory.component'
 dependencies {
     implementation project(":world")
     implementation project(":ai")
+    implementation project(":save")
+
+    implementation group: 'net.onedaybeard.artemis', name: 'artemis-odb-serializer-json', version: '2.3.0'
 }
